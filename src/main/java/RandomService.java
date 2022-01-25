@@ -14,7 +14,9 @@ public class RandomService {
 
         while(true) {
 
-            System.out.print("Press enter!");
+            System.out.println();
+            System.out.print("Press enter! Пока не будет сообщения, что список пуст)");
+            System.out.println();
             in.nextLine();
 
             try {
@@ -38,9 +40,7 @@ public class RandomService {
                         source.remove(studentElement2);
                     }
                 }
-                else {
-                    System.out.println("Отвечает: " + studentElement2 + " Люди из одной команды. Сделать еще раз Рандом");
-                }
+
             } catch (IllegalArgumentException e) {
                 System.out.println("Список пуст");
                 break;
