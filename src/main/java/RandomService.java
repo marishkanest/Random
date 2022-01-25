@@ -18,19 +18,27 @@ public class RandomService {
             in.nextLine();
 
             try {
-                //для первого студента
                 int studentIndex = student1.nextInt(source.size());
                 Student studentElement = source.get(studentIndex);
-                System.out.println("Спрашивает: " + studentElement);
-                source.remove(studentIndex);
 
-                //для второго студента
+
                 int studentIndex2 = student2.nextInt(source.size());
                 Student studentElement2 = source.get(studentIndex2);
-                if (studentElement2.team != studentElement.team) {
+                if (studentElement2.team != studentElement.team
+                        && studentElement.sprosil!=1 && studentElement2.otvetil!=1) {
+                    System.out.println("Спрашивает: " + studentElement);
                     System.out.println("Отвечает: " + studentElement2);
-                    source.remove(studentIndex2);
-                } else {
+                    studentElement.sprosil++;
+                    studentElement2.otvetil++;
+
+                    if(studentElement.sprosil==1 && studentElement.otvetil==1){
+                        source.remove(studentElement);
+                    }
+                    if(studentElement2.sprosil==1 && studentElement2.otvetil==1){
+                        source.remove(studentElement2);
+                    }
+                }
+                else {
                     System.out.println("Отвечает: " + studentElement2 + " Люди из одной команды. Сделать еще раз Рандом");
                 }
             } catch (IllegalArgumentException e) {
