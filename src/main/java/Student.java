@@ -2,6 +2,8 @@ public class Student {
 
     int team;
     String name;
+    int sprosil =0;
+    int otvetil =0;
 
     public Student(int team, String name) {
         this.team = team;
