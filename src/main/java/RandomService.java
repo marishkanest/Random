@@ -34,10 +34,27 @@ public class RandomService {
                         source.remove(studentElement2);
                     }
                     System.out.println(); //просто для красоты
-                    System.out.print("Press enter! Пока не будет сообщения, что список пуст)");
+                    System.out.print("Press enter!");
                     System.out.println(); //просто для красоты
                     in.nextLine(); //ввод кнопки
                 }
+                //тут условие, если осталось два человека и студенты из одной команды
+                if (source.size()==2 && studentElement.team == studentElement2.team && studentElement!=studentElement2
+                        && studentElement.sprosil!=1 && studentElement2.otvetil!=1){
+                    System.out.println("Спрашивает: " + studentElement); //спрашивает первый
+                    System.out.println("Отвечает: люди из одной команды " + studentElement2); //отвечает второй
+
+                    source.remove(studentElement);
+                    source.remove(studentElement2);
+                }
+                //тут условие, если остался один человек и он не спрашивал и не отвечал
+                if (source.size()==1
+                        && studentElement.sprosil!=1 && studentElement2.otvetil!=1){
+
+                    System.out.println("остался один человек " + studentElement);
+                    source.remove(studentElement);
+                }
+
 
             } catch (IllegalArgumentException e) { //тут исключение , наверно чтобы не было ошибок при удалении, надо у Александра спросить
                 System.out.println("Список пуст");
