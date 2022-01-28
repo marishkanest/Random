@@ -10,6 +10,7 @@ public class Main {
 
     public static RandomService randomService = new RandomService();
 
+
     public static void main(String[] args) throws IOException {
 
         System.out.println("Введите путь к файлу:");
