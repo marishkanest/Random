@@ -55,7 +55,6 @@ public class RandomService {
                     source.remove(studentElement);
                 }
 
-
             } catch (IllegalArgumentException e) { //тут исключение , наверно чтобы не было ошибок при удалении, надо у Александра спросить
                 System.out.println("Список пуст");
                 break; // останавливаем цикл, когда список пуст, чтобы не было ошибок
