@@ -5,6 +5,14 @@ public class Student {
     int sprosil =0;
     int otvetil =0;
 
+    public int getTeam() {
+        return team;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public Student(int team, String name) {
         this.team = team;
         this.name = name;
