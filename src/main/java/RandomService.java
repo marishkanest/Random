@@ -12,7 +12,7 @@ public class RandomService {
 
         Scanner in = new Scanner(System.in); //для кнопки
 
-        while(true) { //запускаем цикл
+        while(true) {
 
             try { //для исключения блок
                 int studentIndex = student1.nextInt(source.size()); //выбор случайного индекса из элементов списка
@@ -33,9 +33,9 @@ public class RandomService {
                     if(studentElement2.sprosil==1 && studentElement2.otvetil==1){ // тут для второго студента тоже самое
                         source.remove(studentElement2);
                     }
-                    System.out.println(); //просто для красоты
-                    System.out.print("Press enter!");
-                    System.out.println(); //просто для красоты
+
+                    System.out.print( "\n Press enter!\n");
+
                     in.nextLine(); //ввод кнопки
                 }
                 //тут условие, если осталось два человека и студенты из одной команды
@@ -55,7 +55,7 @@ public class RandomService {
                     source.remove(studentElement);
                 }
 
-            } catch (IllegalArgumentException e) { //тут исключение , наверно чтобы не было ошибок при удалении, надо у Александра спросить
+            } catch (IllegalArgumentException e) { //тут исключение
                 System.out.println("Список пуст");
                 break; // останавливаем цикл, когда список пуст, чтобы не было ошибок
             }
