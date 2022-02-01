@@ -18,7 +18,9 @@ public class Student {
     int otvetil =0;
 
 
-    public Student(int parseInt, String s) {
+    public Student(int team, String name) {
+        this.team=team;
+        this.name=name;
      }
 }
 

@@ -58,13 +58,15 @@ public class Main {
                     for (Student student : students) {
                         studentsRepository.save(student);
                     }
+                    break;
                 }
                 case 2: {
                     System.out.println(studentsRepository.findAll());
+                    break;
                 }
                 case 3: {
                     randomService.random(studentsRepository.findAll());
-
+                    break;
                 }
 
 
